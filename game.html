@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="css/game.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@1,600&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="shortcut icon" href="obito.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container-fluid d-flex align-center space-between">
+        <div class="logo">
+          <a href="index.html">
+            Anime<div>World</div>
+          </a>
+        </div>
+        <div class="reset-btn">
+          <a href="game.html">Reset</a>
+        </div>
+      </div>
+    </header>
+    <section class="hero-block">
+      <div class="container-custom">
+        <h1 class="text-center">
+          Enjoy it!
+          <span>
+            <a href="#rules" class="title-shadow-pink">(How to play?)</a>
+          </span>
+        </h1>
+        <div class="tabs text-center">
+          <span class="tab" onclick="switch_btn.play();">Naruto</span>
+          <span class="tab" onclick="switch_btn2.play();">Bleach</span>
+          <span class="tab" onclick="switch_btn3.play();">HxH</span>
+          <span class="tab" onclick="switch_btn4.play();">H-Academy</span>
+        </div>
+        <div class="items-wrapper d-flex align-center tab-item justify-center">
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_you_naruto"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_you_naruto(), naruto_sound.play();">Its you</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_defender_naruto"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_defender_naruto(), naruto_sound2.play();">Defender</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_attacker_naruto"/>            
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_attacker_naruto(), naruto_sound3.play();">Attacker</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_attacker2_naruto"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_attacker2_naruto(), naruto_sound4.play();">Attacker</button>
+            </div>
+          </div>
+        </div>
+        <div class="items-wrapper d-flex align-center tab-item justify-center">
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_bleach_you"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_bleach_you(), bleach_sound.play();">Its You!</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_bleach_defender"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_bleach_defender(), bleach_sound2.play();">Defender</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_bleach_attacker"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_bleach_attacker(), bleach_sound3.play();">Attacker</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_bleach_attacker2"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_bleach_attacker2(), bleach_sound4.play();">Attacker</button>
+            </div>
+          </div>
+        </div>
+        <div class="items-wrapper d-flex align-center tab-item justify-center">
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_hunter_you"/> 
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_hunter_you(), btn_click.play();">Its You!</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_hunter_defender"/> 
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_hunter_defender(), btn_click_2.play();">Defender</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_hunter_attacker"/> 
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_hunter_attacker(), btn_click_3.play();">Attacker</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_hunter_attacker2"/> 
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_hunter_attacker2(), btn_click_4.play();">Attacker</button>
+            </div>
+          </div>
+        </div>
+        <div class="items-wrapper d-flex align-center tab-item justify-center">
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_academy_you"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_academy_you(), btn_click_5.play();">Its you!</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_academy_defender"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_academy_defender(), btn_click_2.play();">Defender</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_academy_attacker"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_academy_attacker(), btn_click_3.play();">Attacker</button>
+            </div>
+          </div>
+          <div class="item-wrap d-flex">
+            <div class="item d-flex">
+              <i class="material-icons">question_mark</i>
+              <img id="image_shower_academy_attacker2"/>
+            </div>
+            <div class="game-btn d-flex justify-center">
+              <button onclick="get_random_image_academy_attacker2(), btn_click_4.play();">Attacker</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tutorial relative">
+      <div class="container">
+        <h3 class="text-center" id="rules">Rules</h3>
+        <div class="tutorial-holder d-flex justify-center align-center">
+          <ul class="tutorial-info text-center">
+            <li>
+              <div class="icon-circle d-flex justify-center align-center">
+                <i class="material-icons">group_work</i>
+              </div>
+              <div class="tutorial-text">It's simple, there are three different buttons,you are,the defender - is your ally and attackers - is your only enemies.</div>
+            </li>
+            <li>
+              <div class="icon-circle d-flex justify-center align-center">
+                <i class="material-icons">supervisor_account</i>
+              </div>
+              <div class="tutorial-text">If you hit a repeated character, then press the button again.(Where the repeat fell out!)</div>
+            </li>
+            <li>
+              <div class="icon-circle d-flex justify-center align-center">
+                <i class="material-icons">menu_book</i>
+              </div>
+              <div class="tutorial-text">All you need is knowledge of anime and characters so that you can decide if you survived this battle or not!</div>
+            </li>
+          </ul>
+          <div class="tutorial-image">
+            <img src="img/ruk.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="anime-char-image relative">
+    </section>
+    <footer class="footer">
+      <div class="container text-center">
+        <h2 class="title-shadow-red">Anime World</h2>
+        <h3>Support</h3>
+        <ul class="support">
+          <li>
+            <a href="https://www.instagram.com/morghulis.80/">Instagram</a>
+          </li>
+          <li>
+            <a href="https://t.me/nstp7">Telegram</a>
+          </li>
+          <li>
+            <a href="ttps://twitter.com/EugeneNonstop">Twitter</a>
+          </li>
+          <li>
+            <a href="mailto:house.casablanka@mail.ru">Mail</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/eugene-novikov-342717247/">Linkedin</a>
+          </li>
+        </ul>
+        <div class="footer-copyright title-shadow-black">Copyright 2022 | Eugene Novikov | Ukraine</div>
+      </div>
+    </footer>  
+    <script type="text/javascript">
+      const switch_btn = new Audio();
+      switch_btn.src = "./music/switch_btn.mp3"
+      const switch_btn2 = new Audio();
+      switch_btn2.src = "./music/switch_btn.mp3"
+      const switch_btn3 = new Audio();
+      switch_btn3.src = "./music/switch_btn.mp3"
+      const switch_btn4 = new Audio();
+      switch_btn4.src = "./music/switch_btn.mp3"
+      const naruto_sound = new Audio();
+      naruto_sound.src = "./music/naruto_sound.mp3"
+      const naruto_sound2 = new Audio();
+      naruto_sound2.src = "./music/naruto_sound.mp3"
+      const naruto_sound3 = new Audio();
+      naruto_sound3.src = "./music/naruto_sound.mp3"
+      const naruto_sound4 = new Audio();
+      naruto_sound4.src = "./music/naruto_sound.mp3"
+      const bleach_sound = new Audio();
+      bleach_sound.src = "./music/bleach_sound.mp3"
+      const bleach_sound2 = new Audio();
+      bleach_sound2.src = "./music/bleach_sound.mp3"
+      const bleach_sound3 = new Audio();
+      bleach_sound3.src = "./music/bleach_sound.mp3"
+      const bleach_sound4 = new Audio();
+      bleach_sound4.src = "./music/bleach_sound.mp3"
+      const btn_click = new Audio();
+      btn_click.src = "./music/btn_click.mp3"
+      const btn_click_2 = new Audio();
+      btn_click_2.src = "./music/btn_click.mp3"
+      const btn_click_3 = new Audio();
+      btn_click_3.src = "./music/btn_click.mp3"
+      const btn_click_4 = new Audio();
+      btn_click_4.src = "./music/btn_click.mp3"
+    </script>
+    <script src="js/owl.carousel.min.js"></script>
+  </body>
+
+</html>
+  
+
+
